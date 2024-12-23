@@ -2,7 +2,7 @@
 
 【AAAI 2025】
 
-The dataset and code is open sourced.
+The dataset and code are open.
 
 Readme.md is coming soon...
 
