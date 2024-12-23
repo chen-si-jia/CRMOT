@@ -1,0 +1,15 @@
+{
+    "root":"/mnt/A/hust_csj/Code/Github/CRMOT/datasets/CRTrack",
+    "train":
+    {
+        "mot17":"./data/CRTrack_In-domain.train"
+    },
+    "test_emb":
+    {
+        "mot17":"./data/CRTrack_In-domain.train"
+    },
+    "test":
+    {
+        "mot17":"./data/CRTrack_In-domain.train"
+    }
+}
