@@ -2,7 +2,9 @@
 
 【AAAI 2025】
 
-The dataset and code will be open sourced next week.
+The dataset and code is open sourced.
+
+Readme.md is coming soon...
 
 Please give us a star.
 
