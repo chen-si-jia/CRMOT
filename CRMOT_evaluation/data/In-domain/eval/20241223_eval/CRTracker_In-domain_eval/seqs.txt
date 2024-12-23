@@ -1,0 +1,41 @@
+MOT16
+Circle_A man in a black coat and blue trousers, dragging a cart
+Circle_A man in a blue coat, black trousers and white shoes, carrying a white plastic bag
+Circle_A man in a blue helmet, blue coat, black trousers and black shoes, carrying a red plastic bag
+Circle_A man wearing a black cap, black coat and black trousers
+Circle_A man wearing a black coat and black trousers
+Circle_A man wearing a black coat, black trousers and black shoes
+Circle_A man wearing a black coat, black trousers and white shoes
+Circle_A man wearing a black coat, gray trousers and gray shoes
+Circle_A man wearing a black coat, gray trousers and white shoes
+Circle_A man wearing a blue coat, black trousers and black shoes
+Circle_A man wearing a blue helmet, blue coat and black trousers
+Circle_A man wearing a gray coat and black trousers
+Circle_A man wearing a red coat
+Circle_A man wearing a red coat and black trousers
+Circle_A man wearing a white coat and black trousers
+Circle_A man wearing a white coat, black trousers and white shoes
+Circle_A man wearing a white coat, gray trousers and black shoes
+Circle_A man wearing a yellow coat
+Circle_A man wearing a yellow coat and gray trousers
+Circle_A man wearing a yellow coat, black trousers and red shoes
+Gate2_A man riding a bicycle
+Gate2_A man wearing a black coat and black trousers
+Gate2_A man wearing a black coat, black trousers and white shoes
+Gate2_A man wearing a black coat, gray trousers and gray shoes
+Gate2_A man wearing a white coat, black trousers and white shoes
+Side_A man in a gray coat, carrying a white bag
+Side_A man wearing a black coat
+Side_A man wearing a black coat and black trousers
+Side_A man wearing a gray coat
+Side_A man wearing a gray coat and black trousers
+Side_A man wearing a gray coat and white trousers
+Side_A man wearing a green coat
+Side_A man wearing a green coat and black trousers
+Side_A man wearing a pink coat
+Side_A man wearing a pink coat and gray trousers
+Side_A man wearing a red coat
+Side_A man wearing a white coat
+Side_A man wearing a white coat, black trousers and white shoes
+Side_A man wearing a yellow coat
+Side_A man wearing a yellow coat and gray trousers
