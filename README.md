@@ -5,7 +5,7 @@
 
 If you have any problems with our work, please issue me. We will promptly reply it.
 
-Thanks for your attention! If you are interested in our work, please give us a star.
+Thanks for your attention! If you are interested in our work, please give us a star ⭐️.
 
 ## Introduction
 
