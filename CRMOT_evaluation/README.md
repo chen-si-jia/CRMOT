@@ -1,1 +1,1 @@
-If you want to include the more detailed CRMOT_evaluation/data folder, then you need to download CRMOT_evaluation.zip, which can be obtained from this link. [[Baidu],code:hust](https://pan.baidu.com/s/1tkDVj4drtxqv__gs-zT_yg?pwd=hust).
+
