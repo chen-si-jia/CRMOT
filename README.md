@@ -90,7 +90,7 @@ CRMOT
                 |        |                |——————Garden1_View4
                 |        |                └——————Garden2_View1....
                 |        └——————labels_with_ids_text
-                |                └——————test
+                |                 └——————test
                 |                         |——————gt_test
                 |                         |——————gt_train
                 |                         |——————results(empty)
@@ -168,12 +168,12 @@ CRMOT
   |
   |
   └————CRTracker
-        |
-        |
-        └————model
-                |——————APTM_models
-                |——————CrossMOT_models
-                └——————FairMOT_models
+          |
+          |
+          └————model
+                 |——————APTM_models
+                 |——————CrossMOT_models
+                 └——————FairMOT_models
 ```
 
 * Set the set path in line 25 of the src/train.py file to the absolute path of your own src folder.
@@ -197,9 +197,9 @@ CRMOT
   |
   |
   └————CRTracker
-        |
-        |
-        └————our_trained_models
+          |
+          |
+          └————our_trained_models
                     |
                     |
                     └————CRTracker_model_20.pth
