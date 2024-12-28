@@ -288,3 +288,13 @@ The part of the code are borrowed from the follow work:
 - [wudongming97/RMOT](https://github.com/wudongming97/RMOT)
 
 Thanks for their wonderful works.
+
+## Citation
+```
+@article{chen2024cross,
+  title={Cross-View Referring Multi-Object Tracking},
+  author={Chen, Sijia and Yu, En and Tao, Wenbing},
+  journal={arXiv preprint arXiv:2412.17807},
+  year={2024}
+}
+```
