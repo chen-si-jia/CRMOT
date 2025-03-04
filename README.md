@@ -16,6 +16,10 @@ Thanks for your attention! If you are interested in our work, please give us a s
 
 ![](asset/CRTracker.png)
 
+![Qualitative Results](https://github.com/chen-si-jia/CRMOT/blob/master/asset/Qualitative%20Results.gif)
+
+
+
 ## News
 * (2024.12.23) Our dataset and code are opened!
 * (2024.12.10) Our paper is accepted by AAAI 2025!
