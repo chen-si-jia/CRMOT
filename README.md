@@ -157,7 +157,7 @@ python src/dataset_util/gen_Cross-domain_gt_test.py
 
 ## Training
 
-* You need download APTM model and pre-trained model. The APTM model and pre-trained model can be downloaded from this link [[Baidu],code:hust](https://pan.baidu.com/s/1eLXFa3ZPQuJnDeIuTVBoKg?pwd=hust).
+* You need download APTM model and pre-trained model. The APTM model and pre-trained model can be downloaded from this link [[Google]](https://drive.google.com/drive/folders/1swnSa5ItqYBHLYoec5JEcN798UT45KGz?usp=sharing), [[Baidu],code:hust](https://pan.baidu.com/s/1eLXFa3ZPQuJnDeIuTVBoKg?pwd=hust).
 
 
 The After downloading, you should prepare the data in the following structure:
@@ -187,7 +187,7 @@ Then run:
 bash experiments/train.sh
 ```
 
-* You can download our trained model of CRTracker. our trained model of CRTracker can be downloaded from this link [[Baidu],code:hust](https://pan.baidu.com/s/1mNs_DVQ88Z5fAyAcnHcnng?pwd=hust).
+* You can download our trained model of CRTracker. our trained model of CRTracker can be downloaded from this link [[Google]](https://drive.google.com/drive/folders/1gxFQOP44JtT1y84kruX1pimXh8qSZS4g?usp=sharing), [[Baidu],code:hust](https://pan.baidu.com/s/1mNs_DVQ88Z5fAyAcnHcnng?pwd=hust).
 
 The After downloading, you should prepare the data in the following structure:
 ```
