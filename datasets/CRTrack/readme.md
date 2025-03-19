@@ -1,1 +1,1 @@
-The CRTrack dataset can be downloaded from this link [[Baidu],code:hust](https://pan.baidu.com/s/1jSxEl_-bdBl8uf50bh1dNw?pwd=hust).
+The CRTrack dataset can be downloaded from this link [[Hugging Face]](https://huggingface.co/datasets/sijiachenn/CRTrack), [[Baidu],code:hust](https://pan.baidu.com/s/1jSxEl_-bdBl8uf50bh1dNw?pwd=hust).
