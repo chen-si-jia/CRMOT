@@ -68,7 +68,7 @@ pip install numpy==1.23.5 -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 ## Dataset Preparation
 
-* You need download our CRTrack dataset. The CRTrack dataset can be downloaded from this link [[Baidu],code:hust](https://pan.baidu.com/s/1jSxEl_-bdBl8uf50bh1dNw?pwd=hust).
+* You need download our CRTrack dataset. The CRTrack dataset can be downloaded from this link [[Hugging Face]](https://huggingface.co/datasets/sijiachenn/CRTrack), [[Baidu],code:hust](https://pan.baidu.com/s/1jSxEl_-bdBl8uf50bh1dNw?pwd=hust).
 
 The After downloading, you should prepare the data in the following structure:
 ```
