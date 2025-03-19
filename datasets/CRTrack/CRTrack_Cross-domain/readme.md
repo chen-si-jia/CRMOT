@@ -1,1 +1,1 @@
-The Cross-domain of CRTrack dataset can be downloaded from this link [[Baidu],code:hust](https://pan.baidu.com/s/1E31_cI_l7gFKtHSpeWcUhg?pwd=hust).
+The Cross-domain of CRTrack dataset can be downloaded from this link [[Hugging Face]](https://huggingface.co/datasets/sijiachenn/CRTrack/tree/main/CRTrack_Cross-domain), [[Baidu],code:hust](https://pan.baidu.com/s/1E31_cI_l7gFKtHSpeWcUhg?pwd=hust).
