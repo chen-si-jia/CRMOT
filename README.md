@@ -1,7 +1,8 @@
 # Cross-view Referring Multi-Object Tracking（CRMOT）
 
 > [**【AAAI 2025】Cross-View Referring Multi-Object Tracking**](https://arxiv.org/abs/2412.17807)            
-> Sijia Chen, En Yu, Wenbing Tao  
+> Sijia Chen, En Yu, Wenbing Tao
+> *[AAAI] Paper ([https://ojs.aaai.org/index.php/AAAI/article/view/32219](https://ojs.aaai.org/index.php/AAAI/article/view/32219))*
 > *[ArXiv] Paper ([https://arxiv.org/abs/2412.17807](https://arxiv.org/abs/2412.17807))*
 
 If you have any problems with our work, please issue me. We will promptly reply it.
@@ -302,7 +303,7 @@ The part of the code are borrowed from the follow work:
 - [wudongming97/RMOT](https://github.com/wudongming97/RMOT)
 
 Thanks for their wonderful works.
- 
+
 ## Citation
 ```
 @inproceedings{chen2025cross,
