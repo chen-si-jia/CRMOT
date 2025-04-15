@@ -302,7 +302,7 @@ The part of the code are borrowed from the follow work:
 - [wudongming97/RMOT](https://github.com/wudongming97/RMOT)
 
 Thanks for their wonderful works.
-
+ 
 ## Citation
 ```
 @inproceedings{chen2025cross,
