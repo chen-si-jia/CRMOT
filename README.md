@@ -215,6 +215,17 @@ run:
 bash experiments/test.sh
 ```
 
+## Visualization
+run:
+```
+python CRMOT_evaluation/CRMOT_Visualization_en.py
+```
+or
+```
+python CRMOT_evaluation/CRMOT_Visualization_cn.py
+```
+Note: You need to change the path.
+
 ## Evaluation
 
 ### Environment Configuration for Evaluation
