@@ -184,10 +184,10 @@ if __name__ == '__main__':
                 if (int(frame_name.split("_")[-1].split(".jpg")[0]) == result_img_name):
                     # 画矩形框
                     color = create_unique_color_uchar(result_id)
-                    rectangle_bbox_score(image, result_x, result_y, result_w, result_h, color, label=str(result_id))
+                    rectangle_bbox_score(image, result_x, result_y, result_w, result_h, color, thickness=2, label=str(result_id))
 
             # 保存修改后的图片
-            drawed_img_path = os.path.join(drawed_img_dir_path, frame_name.split("/")[-1])
+            drawed_img_path = os.path.join(drawed_img_dir_path, frame_name.split("/")[-1].split(".")[0] + ".jpg")
             cv2.imwrite(drawed_img_path, image)
         
         # =================  图像合并成视频  ====================
