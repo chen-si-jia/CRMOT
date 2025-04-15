@@ -305,10 +305,13 @@ Thanks for their wonderful works.
 
 ## Citation
 ```
-@article{chen2024cross,
-  title={Cross-View Referring Multi-Object Tracking},
+@inproceedings{chen2025cross,
+  title={Cross-view referring multi-object tracking},
   author={Chen, Sijia and Yu, En and Tao, Wenbing},
-  journal={arXiv preprint arXiv:2412.17807},
-  year={2024}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={2},
+  pages={2204--2211},
+  year={2025}
 }
 ```
