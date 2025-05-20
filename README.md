@@ -10,7 +10,7 @@ If you have any problems with our work, please issue me. We will promptly reply 
 
 Thanks for your attention! If you are interested in our work, please give us a star ⭐️.
 
-## Introduction
+## :mag: Introduction
 
 ![](asset/CRMOT_task.png)
 
@@ -21,12 +21,12 @@ Thanks for your attention! If you are interested in our work, please give us a s
 ![](asset/CRTracker.png)
 
 
-## News
+## :fire: News
 * (2024.12.23) Our dataset and code are opened!
 * (2024.12.10) Our paper is accepted by AAAI 2025!
 
 
-## Environment Configuration for CRTracker
+## :dash: Environment Configuration for CRTracker
 
 * Note: We use a NVIDIA GeForce RTX 3090 GPU and cuda 11.1. 
 
@@ -68,7 +68,7 @@ pip uninstall numpy
 pip install numpy==1.23.5 -i https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
 
-## Dataset Preparation
+## :dash: Dataset Preparation
 
 * You need download our CRTrack dataset. The CRTrack dataset can be downloaded from this link [[Hugging Face]](https://huggingface.co/datasets/sijiachenn/CRTrack), [[Baidu],code:hust](https://pan.baidu.com/s/1jSxEl_-bdBl8uf50bh1dNw?pwd=hust).
 
@@ -157,7 +157,7 @@ python src/dataset_util/gen_Cross-domain_gt_test.py
 
 * Change the absolute path of the CRTrack dataset to the root path in the src/lib/cfg/CRTrack_In-domain.json file. Change the absolute path of the CRTrack dataset to the data_dir path in the src/lib/opts.py file.
 
-## Training
+## :fire: Training
 
 * You need download APTM model and pre-trained model. The APTM model and pre-trained model can be downloaded from this link [[Google]](https://drive.google.com/drive/folders/1swnSa5ItqYBHLYoec5JEcN798UT45KGz?usp=sharing), [[Baidu],code:hust](https://pan.baidu.com/s/1eLXFa3ZPQuJnDeIuTVBoKg?pwd=hust).
 
@@ -211,13 +211,13 @@ CRMOT
                     └————CRTracker_model_20.pth
 ```
 
-## Inference
+## :dash: Inference
 run:
 ```
 bash experiments/test.sh
 ```
 
-## Visualization
+## :dash: Visualization
 run:
 ```
 python CRMOT_evaluation/CRMOT_Visualization_en.py
@@ -228,7 +228,7 @@ python CRMOT_evaluation/CRMOT_Visualization_cn.py
 ```
 Note: You need to change the path.
 
-## Evaluation
+## :dash: Evaluation
 
 ### Environment Configuration for Evaluation
 
@@ -297,7 +297,7 @@ CVRMA metric：MOTA in XXX_CVRMA.xlsx is CVRMA.
 
 CVRIDF1 metric：IDF1 in XXX_CVRIDF1.xlsx is CVRIDF1.
 
-## Acknowledgement
+## :bouquet: Acknowledgement
 The part of the code are borrowed from the follow work:
 - [shengyuhao/DIVOTrack](https://github.com/shengyuhao/DIVOTrack)
 - [ifzhang/FairMOT](https://github.com/ifzhang/FairMOT)
@@ -305,7 +305,7 @@ The part of the code are borrowed from the follow work:
 
 Thanks for their wonderful works.
 
-## Citation
+## :pencil2: Citation
 ```
 @inproceedings{chen2025cross,
   title={Cross-view referring multi-object tracking},
