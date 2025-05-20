@@ -1,7 +1,8 @@
 # Cross-view Referring Multi-Object Tracking（CRMOT）
 
 > [**【AAAI 2025】Cross-View Referring Multi-Object Tracking**](https://ojs.aaai.org/index.php/AAAI/article/view/32219)            
-> Sijia Chen, En Yu, Wenbing Tao           
+> Sijia Chen, En Yu, Wenbing Tao                   
+> Huazhong University of Science and Technology     
 > *[AAAI] Paper ([https://ojs.aaai.org/index.php/AAAI/article/view/32219](https://ojs.aaai.org/index.php/AAAI/article/view/32219))*           
 > *[ArXiv] Paper ([https://arxiv.org/abs/2412.17807](https://arxiv.org/abs/2412.17807))*           
 
