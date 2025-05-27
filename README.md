@@ -130,17 +130,17 @@ CRMOT
                                           └——————trackled_text
 ```
 
-* Run the src/dataset_util/gen_labels_dataset.py code to generate the datasets/CRTrack/CRTrack_In-domain/labels_with_ids folder and the files it contains.
+* Run the ```src/dataset_util/gen_labels_dataset.py``` code to generate the ```datasets/CRTrack/CRTrack_In-domain/labels_with_ids``` folder and the files it contains.
 
-Note: Each time before running the gen_labels_dataset.py file, you need to delete the previously generated labels_with_ids folder.
+Note: Each time before running the ```gen_labels_dataset.py``` file, you need to delete the previously generated labels_with_ids folder.
 
-* Run the src/dataset_util/convert_cross_view.py code to generate the datasets/CRTrack/CRTrack_In-domain/labels_with_ids_cross_view folder and the files it contains.
+* Run the ```src/dataset_util/convert_cross_view.py``` code to generate the ```datasets/CRTrack/CRTrack_In-domain/labels_with_ids_cross_view``` folder and the files it contains.
 
-Note: Each time before running the convert_cross_view.py file, you need to delete the previous labels_with_ids_cross_view folder.
+Note: Each time before running the ```convert_cross_view.py``` file, you need to delete the previous labels_with_ids_cross_view folder.
 
-* Modify the path (lines 5-8 of set_CRTracker_train.py) in the src/dataset_util/set_CRTracker_train.py file. Create a new data folder under the src folder, and then run the src/dataset_util/set_CRTracker_train.py file.
+* Modify the path (lines 5-8 of set_CRTracker_train.py) in the ```src/dataset_util/set_CRTracker_train.py``` file. Create a new data folder under the src folder, and then run the ```src/dataset_util/set_CRTracker_train.py``` file.
 
-Note: 1. Before running the set_CRTracker_train.py file each time, you need to delete the previously generated src/data/CRTrack_In-domain.train file. 2. Make sure that the folder pointed to by label in line 7 of set_CRTracker_train.py only contains the folder of the training set, and no other files such as compressed files.
+Note: 1. Before running the ```set_CRTracker_train.py``` file each time, you need to delete the previously generated ```src/data/CRTrack_In-domain.train``` file. 2. Make sure that the folder pointed to by label in line 7 of ```set_CRTracker_train.py``` only contains the folder of the training set, and no other files such as compressed files.
 
 * Generate language tags gt
 
@@ -155,7 +155,7 @@ CRTrack Cross-domain:
 python src/dataset_util/gen_Cross-domain_gt_test.py
 ```
 
-* Change the absolute path of the CRTrack dataset to the root path in the src/lib/cfg/CRTrack_In-domain.json file. Change the absolute path of the CRTrack dataset to the data_dir path in the src/lib/opts.py file.
+* Change the absolute path of the CRTrack dataset to the root path in the ```src/lib/cfg/CRTrack_In-domain.json``` file. Change the absolute path of the CRTrack dataset to the data_dir path in the ```src/lib/opts.py``` file.
 
 ## 🔥 Training
 
@@ -182,7 +182,7 @@ CRMOT
                  └——————FairMOT_models
 ```
 
-* Set the set path in line 25 of the src/train.py file to the absolute path of your own src folder.
+* Set the set path in line 25 of the ```src/train.py``` file to the absolute path of your own src folder.
 
 Then run:
 ```
@@ -242,7 +242,7 @@ conda create -n CRMOT_evaluation python=3.7
 conda activate CRMOT_evaluation
 ```
 
-* Go to the CRMOT_evaluation\MOT folder
+* Go to the ```CRMOT_evaluation\MOT``` folder
 
 then run:
 ```
@@ -252,7 +252,7 @@ pip install openpyxl
 
 * Install the matlab.engine library. 
 
-Open the terminal and switch to the extern\engines\python folder in the Matlab installation folder on your computer.
+Open the terminal and switch to the ```extern\engines\python``` folder in the Matlab installation folder on your computer.
 
 then run:
 ```
@@ -261,7 +261,7 @@ python setup.py install
 
 ### ➡️ Process for Evaluation
 
-* After the inference is completed, compress the inference result folder, then download the compressed package to the CRMOT_evaluation\data\In-domain\Inference_results or CRMOT_evaluation\data\Cross-domain\Inference_results folder and decompress it.
+* After the inference is completed, compress the inference result folder, then download the compressed package to the ```CRMOT_evaluation\data\In-domain\Inference_results``` or ```CRMOT_evaluation\data\Cross-domain\Inference_results``` folder and decompress it.
 
 * Modify the path in inference_convert.py. 
 
@@ -289,7 +289,7 @@ python MOT\evalMOT.py
 
 * Statistics CVRIDF1 and CVRMA metrics
 
-Go to the CRMOT_evaluation\data\In-domain\eval\eval_results folder or the CRMOT_evaluation\data\Cross-domain\eval\eval_results folder to collect statistical indicators.
+Go to the ```CRMOT_evaluation\data\In-domain\eval\eval_results``` folder or the ```CRMOT_evaluation\data\Cross-domain\eval\eval_results``` folder to collect statistical indicators.
 
 Note:
 
