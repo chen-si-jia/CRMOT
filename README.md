@@ -46,6 +46,7 @@ conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=11
 * Go to the CRTracker folder. Install some packages.
 ```
 cd ${CRTracker}
+pip install cython -i https://pypi.tuna.tsinghua.edu.cn/simple/
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
 
