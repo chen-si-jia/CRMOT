@@ -478,7 +478,7 @@ if __name__ == "__main__":
                     Garden1_A man wearing a gray coat and black trousers.:11
                     Garden1_A man wearing a green coat and black trousers.:5
                     Garden1_A man wearing a red coat and blue trousers.:8
-                    Garden1_A man wearing a red coat and black trousers.:6:14
+                    Garden1_A man wearing a red coat and black trousers.:6,14
                     Garden1_A man wearing a red cap, red coat and black trousers.:6
                     Garden1_A man wearing a red and purple coat and blue trousers.:3
                     Garden1_A man in a yellow coat and gray trousers, holding a dog.:1
