@@ -306,6 +306,12 @@ The part of the code are borrowed from the follow work:
 
 Thanks for their wonderful works.
 
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=chen-si-jia/CRMOT&type=Date)](https://star-history.com/#chen-si-jia/CRMOT&Date)
+
+
 ## ✏️ Citation
 ```
 @inproceedings{chen2025cross,
