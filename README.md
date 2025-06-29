@@ -69,7 +69,7 @@ pip uninstall numpy
 pip install numpy==1.23.5 -i https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
 
-## 💨 Dataset Preparation
+## ✨ Dataset Preparation
 
 * You need download our CRTrack dataset. The CRTrack dataset can be downloaded from this link [[Hugging Face]](https://huggingface.co/datasets/sijiachenn/CRTrack), [[Baidu],code:hust](https://pan.baidu.com/s/1jSxEl_-bdBl8uf50bh1dNw?pwd=hust).
 
@@ -229,7 +229,7 @@ python CRMOT_evaluation/CRMOT_Visualization_cn.py
 ```
 Note: You need to change the path.
 
-## ✨ Evaluation
+## 📊 Evaluation
 
 ### ➡️ Environment Configuration for Evaluation
 
