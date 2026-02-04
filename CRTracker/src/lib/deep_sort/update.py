@@ -167,10 +167,12 @@ class Update:
             # ================ PM module ================
             # Set the number of views according to the scene
             sence = self.seq[view]["image_filenames"].split("_")[0]
-            if ("Garden1" == sence) or ("ParkingLot" == sence):
+            if ("Garden1" == sence) or ("Garden2" == sence) or ("ParkingLot" == sence): # cross-domain
                 view_list = ["View1", "View2", "View3", "View4"]
-            else:
+            elif(("Gate2" == sence) or ("Circle" == sence) or ("Side" == sence)): # in-domain
                 view_list = ["View1", "View2", "View3"]
+            else:
+                view_list = ["View1"] # single view
             
             id_view_num = 1
             id_views_score_attr = []
@@ -288,3 +290,4 @@ class Update:
             visualizer = visualization.NoVisualization(self.seq)
         print("start inference...")
         visualizer.run(self.frame_matching, self.frame_callback, self.frame_display)
+
