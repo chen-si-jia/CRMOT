@@ -22,6 +22,7 @@ Thanks for your attention! If you are interested in our work, please give us a s
 
 
 ## 🔥 News
+* (2026.02.04) Add CRTracker for single view inference demo
 * (2024.12.23) Our dataset and code are opened!
 * (2024.12.10) Our paper is accepted by AAAI 2025!
 
@@ -68,6 +69,25 @@ pip install ffmpy -i https://pypi.tuna.tsinghua.edu.cn/simple/
 pip uninstall numpy
 pip install numpy==1.23.5 -i https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
+
+## ⚡️ CRTracker for single view inference demo
+
+run:
+```
+cd CRTracker
+bash experiments/test_single_view_demo.sh
+```
+Note:
+
+The path you need to modify：
+1. ```load_model``` in line 6 of CRTracker/experiments/test_single_view_demo.sh
+2. ```testsets_path``` in line 352 of CRTracker/src/track_single_view_demo.py
+3. ```imgs_dir_path``` in line 353 of CRTracker/src/track_single_view_demo.py
+4. ```save_results_path``` in line 356 of CRTracker/src/track_single_view_demo.py
+5. ```save_dir_name``` in line 357 of CRTracker/src/track_single_view_demo.py
+6. ```checkpoint``` in line 361 of CRTracker/src/track_single_view_demo.py
+7. ```config``` in line 362 of CRTracker/src/track_single_view_demo.py
+
 
 ## ✨ Dataset Preparation
 
@@ -297,6 +317,7 @@ Note:
 CVRMA metric：MOTA in XXX_CVRMA.xlsx is CVRMA.
 
 CVRIDF1 metric：IDF1 in XXX_CVRIDF1.xlsx is CVRIDF1.
+
 
 ## 💐 Acknowledgement
 The part of the code are borrowed from the follow work:
