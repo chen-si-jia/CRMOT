@@ -472,7 +472,7 @@ if __name__ == "__main__":
         seqs_str = """Garden1_A man wearing a white coat and pink trousers.:0
                     Garden1_A man wearing a white coat and gray trousers.:4
                     Garden1_A man wearing a black coat and blue trousers.:10
-                    Garden1_A man wearing a black coat and gary trousers.:2,13,15
+                    Garden1_A man wearing a black coat and gray trousers.:2,13,15
                     Garden1_A man in a white cap, black coat and gray trousers, holding a stick.:2
                     Garden1_A man in a black helmet, black and white coat and gray trousers, riding a bicycle.:13
                     Garden1_A man wearing a gray coat and black trousers.:11
@@ -499,9 +499,9 @@ if __name__ == "__main__":
                     Garden2_A man in a black helmet, gray coat and black trousers, riding a bicycle.:0
                     Garden2_A man wearing a red coat and black trousers.:6
                     Garden2_A man in a yellow coat and blue trousers, carrying a schoolbag.:11
-                    Garden2_A man wearing a yellow cap, orange and blue coat and gary trousers.:15
+                    Garden2_A man wearing a yellow cap, orange and blue coat and gray trousers.:15
                     Garden2_A man in a blue coat and gray trousers, carrying a black schoolbag.:12
-                    Garden2_A man wearing an orange and gary coat and gary trousers.:14
+                    Garden2_A man wearing an orange and gray coat and gray trousers.:14
                     ParkingLot_A man, carrying a schoolbag and holding a red can.:2
                     ParkingLot_A man in a white coat, riding a bicycle.:1
                     ParkingLot_A man wearing a white coat and black trousers.:4
