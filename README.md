@@ -163,13 +163,15 @@ Note: 1. Before running the ```set_CRTracker_train.py``` file each time, you nee
 
 CRTrack In-domain:
 ```
-python src/dataset_util/gen_In-domain_gt_train.py
-python src/dataset_util/gen_In-domain_gt_test.py
+cd CRTracker/src/dataset_util
+python gen_In-domain_gt_train.py
+python gen_In-domain_gt_test.py
 ```
 
 CRTrack Cross-domain:
 ```
-python src/dataset_util/gen_Cross-domain_gt_test.py
+cd CRTracker/src/dataset_util
+python gen_Cross-domain_gt_test.py
 ```
 
 * Change the absolute path of the CRTrack dataset to the root path in the ```src/lib/cfg/CRTrack_In-domain.json``` file. Change the absolute path of the CRTrack dataset to the data_dir path in the ```src/lib/opts.py``` file.
