@@ -34,6 +34,7 @@ views = ['View1', 'View2', 'View3']
 min_frame = 0
 base_person_id = 0
 max_person_id = 0
+written_files = set()
 
 for seq in seqs:
     for view in views:
@@ -59,5 +60,7 @@ for seq in seqs:
                 for fid, tid, a, b, c, d in gt:
                     label_fpath = osp.join(seq_label_root, '{}_{}_{:06d}.txt'.format(seqs_dict[seq], view, cur_frame - min_frame + 1))
                     label_str = '0 {:d} {:.6f} {:.6f} {:.6f} {:.6f}\n'.format(int(tid), a, b, c, d)
-                    with open(label_fpath, 'a') as f:
+                    mode = 'w' if label_fpath not in written_files else 'a'
+                    with open(label_fpath, mode) as f:
                         f.write(label_str)
+                    written_files.add(label_fpath)
