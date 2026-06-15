@@ -32,6 +32,7 @@ views = ['View1', 'View2', 'View3']
 
 tid_curr = 0
 tid_last = -1
+written_files = set()
 for seq in tqdm(seqs):
     for view in views:
         seq_info = open(osp.join(seq_root, seqs_dict[seq] + "_" + view, 'seqinfo.ini')).read()
@@ -56,5 +57,7 @@ for seq in tqdm(seqs):
             label_fpath = osp.join(seq_label_root, '{}_{}_{:06d}.txt'.format(seqs_dict[seq], view, fid))
             label_str = '0 {:d} {:.6f} {:.6f} {:.6f} {:.6f}\n'.format(
                 tid, x / seq_width, y / seq_height, w / seq_width, h / seq_height)
-            with open(label_fpath, 'a') as f:
+            mode = 'w' if label_fpath not in written_files else 'a'
+            with open(label_fpath, mode) as f:
                 f.write(label_str)      
+            written_files.add(label_fpath)  
