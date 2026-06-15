@@ -153,11 +153,7 @@ CRMOT
 
 * Run the ```src/dataset_util/gen_labels_dataset.py``` code to generate the ```datasets/CRTrack/CRTrack_In-domain/labels_with_ids``` folder and the files it contains.
 
-Note: Each time before running the ```gen_labels_dataset.py``` file, you need to delete the previously generated labels_with_ids folder.
-
 * Run the ```src/dataset_util/convert_cross_view.py``` code to generate the ```datasets/CRTrack/CRTrack_In-domain/labels_with_ids_cross_view``` folder and the files it contains.
-
-Note: Each time before running the ```convert_cross_view.py``` file, you need to delete the previous labels_with_ids_cross_view folder.
 
 * Modify the path (lines 5-8 of set_CRTracker_train.py) in the ```src/dataset_util/set_CRTracker_train.py``` file. Create a new data folder under the src folder, and then run the ```src/dataset_util/set_CRTracker_train.py``` file.
 
