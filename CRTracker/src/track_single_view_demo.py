@@ -107,21 +107,31 @@ def merge_outputs(opt, detections):
     return results
 
 
-def gather_seq_info_multi_view(opt, imgs_dir_path, frame_names, description, aptm, use_cuda=True):
+def build_inference_models(opt):
+    if opt.gpus[0] >= 0:
+        device = torch.device("cuda")
+    else:
+        device = torch.device("cpu")
+
+    model = create_model(opt.arch, opt.heads, opt.head_conv)
+    model = load_model(model, opt.load_model)
+    model = model.to(device)
+    model.eval()
+
+    task = "rstp"
+    checkpoint = "/mnt/A/hust_csj/Code/Github/CRMOT/CRTracker/models/APTM_models/checkpoints/ft_rstp/checkpoint_best.pth"
+    config = "/mnt/A/hust_csj/Code/Github/CRMOT/CRTracker/models/APTM_models/configs/Retrieval_rstp.yaml"
+    aptm = APTM(config, task, checkpoint, device=str(device))
+
+    return model, aptm, device
+
+
+def gather_seq_info_multi_view(opt, imgs_dir_path, frame_names, description, model, aptm, device):
     seq_dict = {}
 
     image_filenames = defaultdict(list)
     detections = defaultdict(list)
     view_detections = defaultdict(list)
-
-    if opt.gpus[0] >= 0:
-        device = torch.device("cuda")
-    else:
-        device = torch.device("cpu")
-    model = create_model(opt.arch, opt.heads, opt.head_conv)
-    model = load_model(model, opt.load_model)
-    model = model.to(device)
-    model.eval()
     
     view = "View1"
     view_ls = ["View1"]
@@ -169,10 +179,7 @@ def gather_seq_info_multi_view(opt, imgs_dir_path, frame_names, description, apt
 
         frame_index = frame_idx
         
-        if use_cuda:
-            blob = torch.from_numpy(img).cuda().unsqueeze(0)
-        else:
-            blob = torch.from_numpy(img).unsqueeze(0)
+        blob = torch.from_numpy(img).to(device).unsqueeze(0)
 
         width = img0.shape[1]
         height = img0.shape[0]
@@ -356,12 +363,7 @@ def main(
     save_results_path = "/mnt/A/hust_csj/Code/CRMOT/CRTracker/single_view_demo/results"
     save_dir_name = "CRTracker_single_view_debug"
 
-    # APTM:
-    task = "rstp"
-    checkpoint = "/mnt/A/hust_csj/Code/Github/CRMOT/CRTracker/models/APTM_models/checkpoints/ft_rstp/checkpoint_best.pth"
-    config = "/mnt/A/hust_csj/Code/Github/CRMOT/CRTracker/models/APTM_models/configs/Retrieval_rstp.yaml"
-    aptm = APTM(config, task, checkpoint)
-
+    model, aptm, device = build_inference_models(opt)
 
     seq_mv = {}
     view_ls = ["View1"]
@@ -388,7 +390,7 @@ def main(
 
     for view in view_ls:
         seq_mv[view] = gather_seq_info_multi_view(
-            opt, imgs_dir_path, frame_names, description, aptm
+            opt, imgs_dir_path, frame_names, description, model, aptm, device
         )
 
     mvtracker = MVTracker(opt, view_ls)
