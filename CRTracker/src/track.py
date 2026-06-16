@@ -79,29 +79,32 @@ def merge_outputs(opt, detections):
     return results
 
 
-def gather_seq_info_multi_view(opt, dataloader, seq, seq_length, use_cuda=True):
+def build_inference_models(opt):
+    if opt.gpus[0] >= 0:
+        device = torch.device("cuda")
+    else:
+        device = torch.device("cpu")
+
+    model = create_model(opt.arch, opt.heads, opt.head_conv)
+    model = load_model(model, opt.load_model)
+    model = model.to(device)
+    model.eval()
+
+    task = "rstp"
+    checkpoint = "/mnt/A/hust_csj/Code/Github/CRMOT/CRTracker/models/APTM_models/checkpoints/ft_rstp/checkpoint_best.pth"
+    config = "/mnt/A/hust_csj/Code/Github/CRMOT/CRTracker/models/APTM_models/configs/Retrieval_rstp.yaml"
+    aptm = APTM(config, task, checkpoint, device=str(device))
+
+    return model, aptm, device
+
+
+def gather_seq_info_multi_view(opt, dataloader, seq, seq_length, model, aptm, device):
     seq_dict = {}
     # print('loading dataset...')
 
     image_filenames = defaultdict(list)
     detections = defaultdict(list)
     view_detections = defaultdict(list)
-    # model
-    # print('Creating model...')
-    if opt.gpus[0] >= 0:
-        device = torch.device("cuda")
-    else:
-        device = torch.device("cpu")
-    model = create_model(opt.arch, opt.heads, opt.head_conv)
-    model = load_model(model, opt.load_model)
-    model = model.to(device)
-    model.eval()
-
-    # APTM:
-    task = "rstp"
-    checkpoint = "/mnt/A/hust_csj/Code/Github/CRMOT/CRTracker/models/APTM_models/checkpoints/ft_rstp/checkpoint_best.pth"
-    config = "/mnt/A/hust_csj/Code/Github/CRMOT/CRTracker/models/APTM_models/configs/Retrieval_rstp.yaml"
-    aptm = APTM(config, task, checkpoint)
     
     view_ls = dataloader.view_list
     for data_i, (path, img, img0) in tqdm(enumerate(dataloader), total=len(dataloader)):
@@ -113,10 +116,7 @@ def gather_seq_info_multi_view(opt, dataloader, seq, seq_length, use_cuda=True):
             view = path.split("/")[-3].split("_")[1] # Automatically set the view
             frame_index = int(path.split("/")[-1].split(".jpg")[0].split("_")[-1])
         
-        if use_cuda:
-            blob = torch.from_numpy(img).cuda().unsqueeze(0)
-        else:
-            blob = torch.from_numpy(img).unsqueeze(0)
+        blob = torch.from_numpy(img).to(device).unsqueeze(0)
 
         width = img0.shape[1]
         height = img0.shape[0]
@@ -325,6 +325,7 @@ def main(
     result_root = os.path.join(data_root, "..", "results", exp_name)
     mkdir_if_missing(result_root)
     view_ls = []
+    model, aptm, device = build_inference_models(opt)
     
     # run tracking
     for seq in seqs:
@@ -344,7 +345,7 @@ def main(
                         opt.img_size,
                     )
                     seq_mv[view] = gather_seq_info_multi_view(
-                        opt, dataloader, seq, dataloader.seq_length
+                        opt, dataloader, seq, dataloader.seq_length, model, aptm, device
                     )
             if scene in train_ls:
                 seq_mv = {}
@@ -355,7 +356,7 @@ def main(
                         opt.img_size,
                     )
                     seq_mv[view] = gather_seq_info_multi_view(
-                        opt, dataloader, seq, dataloader.seq_length
+                        opt, dataloader, seq, dataloader.seq_length, model, aptm, device
                     )
         elif opt.test_campus:
             scene = seq.split("_")[0]
@@ -375,7 +376,7 @@ def main(
                         opt.img_size,
                     )
                     seq_mv[view] = gather_seq_info_multi_view(
-                        opt, dataloader, seq, dataloader.seq_length
+                        opt, dataloader, seq, dataloader.seq_length, model, aptm, device
                     )
         else:
             dataloader = datasets.LoadImages(
@@ -387,7 +388,7 @@ def main(
                     meta_info.find("seqLength=") + 10 : meta_info.find("\nimWidth")
                 ]
             )
-            seq_mv = gather_seq_info_multi_view(opt, dataloader, seq, seq_length)
+            seq_mv = gather_seq_info_multi_view(opt, dataloader, seq, seq_length, model, aptm, device)
             view_ls = dataloader.view_list
 
         mvtracker = MVTracker(opt, view_ls)
