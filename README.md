@@ -195,7 +195,7 @@ CRMOT
   └————CRTracker
           |
           |
-          └————model
+          └————models
                  |——————APTM_models
                  |——————CrossMOT_models
                  └——————FairMOT_models
