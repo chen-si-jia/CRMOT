@@ -167,8 +167,10 @@ class Update:
             # ================ PM module ================
             # Set the number of views according to the scene
             sence = self.seq[view]["image_filenames"].split("_")[0]
-            if ("Garden1" == sence) or ("Garden2" == sence) or ("ParkingLot" == sence): # cross-domain
+            if ("Garden1" == sence) or ("ParkingLot" == sence): # cross-domain
                 view_list = ["View1", "View2", "View3", "View4"]
+            elif ("Garden2" == sence): # cross-domain
+                view_list = ["View1", "View2", "View3"]
             elif(("Gate2" == sence) or ("Circle" == sence) or ("Side" == sence)): # in-domain
                 view_list = ["View1", "View2", "View3"]
             else:
