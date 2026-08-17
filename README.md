@@ -84,6 +84,7 @@ The path you need to modify：
 2. ```testsets_path``` in line 352 of CRTracker/src/track_single_view_demo.py
 3. ```imgs_dir_path``` in line 353 of CRTracker/src/track_single_view_demo.py
 4. ```save_results_path``` in line 356 of CRTracker/src/track_single_view_demo.py
+   If `dla34-ba72cf86.pth` is missing or empty, download it from [[Google]](https://drive.google.com/file/d/1tCXNZxEm7uwiy0-Xs-5KXNmNSs2nhDFk/view?usp=sharing) or [[Baidu],code:hust](https://pan.baidu.com/s/1Yc-tOCx8jJvMYv-wVPEihg?pwd=hust), then place it at `~/.cache/torch/hub/checkpoints/dla34-ba72cf86.pth`.
 5. ```save_dir_name``` in line 357 of CRTracker/src/track_single_view_demo.py
 6. ```checkpoint``` in line 361 of CRTracker/src/track_single_view_demo.py
 7. ```config``` in line 362 of CRTracker/src/track_single_view_demo.py
